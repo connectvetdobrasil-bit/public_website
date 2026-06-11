@@ -3275,4 +3275,79 @@ video {
     padding: 18px;
   }
 }
+/* ===== MOBILE: PROFISSIONAL / EASY / SOLIDÁRIO ===== */
 
+@media (max-width: 768px) {
+  .profissional-topo,
+  .connect-easy-topo,
+  .solidario-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .profissional-lateral,
+  .connect-easy-lateral,
+  .solidario-lateral {
+    order: 1;
+    width: 100%;
+  }
+
+  .profissional-centro,
+  .connect-easy-centro,
+  .solidario-centro {
+    order: 2;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .profissional-lateral.direita,
+  .connect-easy-lateral.direita,
+  .solidario-lateral.direita {
+    display: none;
+  }
+
+  .profissional-personagem,
+  .connect-easy-personagem,
+  .solidario-personagem {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .profissional-centro h2,
+  .connect-easy-centro h2,
+  .solidario-centro h2 {
+    font-size: 42px;
+    line-height: .95;
+    max-width: 340px;
+    margin: 0 auto 18px;
+  }
+
+  .profissional-centro p,
+  .connect-easy-centro p,
+  .solidario-centro p {
+    font-size: 18px;
+    line-height: 1.42;
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  .profissional-buttons,
+  .connect-easy-buttons,
+  .solidario-buttons {
+    width: 100%;
+    max-width: 330px;
+    margin: 24px auto 0;
+  }
+
+  .profissional-buttons .btn,
+  .connect-easy-buttons .btn,
+  .solidario-buttons .btn {
+    width: 100%;
+  }
+}
