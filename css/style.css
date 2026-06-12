@@ -2642,7 +2642,7 @@
 
 .desenvolvimento-topo{
     display:grid;
-    grid-template-columns:1fr 340px;
+    grid-template-columns:minmax(0, 1fr) minmax(340px, 480px);
     gap:50px;
     align-items:center;
     margin-bottom:60px;
@@ -2675,7 +2675,9 @@
     position:relative;
     z-index:2;
     width:100%;
-    max-width:280px;
+    max-width:480px;
+    height:auto;
+    object-fit:contain;
     filter:
     drop-shadow(0 25px 50px rgba(0,0,0,.12));
 }
@@ -2701,7 +2703,7 @@
     }
 
     .desenvolvimento-personagem img{
-        max-width:220px;
+        max-width:420px;
     }
 }
 
@@ -2846,7 +2848,7 @@ video {
   }
 
   .desenvolvimento-personagem img {
-    max-width: min(250px, 72vw);
+    max-width: min(420px, 92vw);
   }
 
   .feature-list {
@@ -3083,7 +3085,7 @@ video {
   }
 
   .desenvolvimento-personagem img {
-    max-width: 220px;
+    max-width: 360px;
   }
 
   .profissional-personagem.vet,
@@ -3231,7 +3233,7 @@ video {
   }
 
   .desenvolvimento-personagem img {
-    max-width: 190px;
+    max-width: 320px;
   }
 
   .ecossistema-glow,
@@ -3334,7 +3336,7 @@ video {
   }
 
   .desenvolvimento-personagem img {
-    max-width: 170px;
+    max-width: 280px;
   }
 
   .card,
