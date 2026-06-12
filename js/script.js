@@ -6,6 +6,8 @@ const sections = document.querySelectorAll('section[id]');
 const contactForm = document.getElementById('contactForm');
 const appModeTabs = [...document.querySelectorAll('.app-mode-tab')];
 const appPreview = document.getElementById('app-preview');
+const ecosystemNodes = [...document.querySelectorAll('.ecosystem-node')];
+const ecosystemDetail = document.querySelector('.ecosystem-detail');
 
 const appModes = {
   tutor: {
@@ -61,6 +63,63 @@ const appModes = {
     resultBadge: '72% da meta alcançada',
     alertTitle: 'Uma nova chance',
     alertText: 'Bidu está disponível para adoção'
+  }
+};
+
+const ecosystemContent = {
+  tutor: {
+    index: '01 / 06',
+    icon: '♥',
+    label: 'Connect Easy',
+    title: 'Tutores no centro do cuidado.',
+    text: 'Uma jornada simples para encontrar profissionais, organizar informações e cuidar de animais de pequeno e grande porte.',
+    connections: ['Profissionais', 'Clínicas', 'Serviços'],
+    result: 'Mais acesso, confiança e continuidade no cuidado.'
+  },
+  profissional: {
+    index: '02 / 06',
+    icon: '+',
+    label: 'Connect Professional',
+    title: 'Profissionais mais visíveis e conectados.',
+    text: 'Ferramentas para apresentar serviços, organizar a rotina, receber oportunidades e construir autoridade no setor animal.',
+    connections: ['Tutores', 'Negócios', 'Inteligência'],
+    result: 'Mais oportunidades, organização e crescimento profissional.'
+  },
+  negocios: {
+    index: '03 / 06',
+    icon: '▦',
+    label: 'Empresas e estabelecimentos',
+    title: 'Negócios integrados à jornada animal.',
+    text: 'Clínicas, pet shops, laboratórios e fornecedores participam de uma rede especializada, próxima de quem precisa.',
+    connections: ['Profissionais', 'Tutores', 'Parceiros'],
+    result: 'Mais alcance, relacionamento e presença no mercado.'
+  },
+  solidario: {
+    index: '04 / 06',
+    icon: '◎',
+    label: 'Connect Vet Solidário',
+    title: 'Impacto social com alcance e transparência.',
+    text: 'ONGs, protetores e voluntários encontram apoio para campanhas, adoções, resgates e necessidades emergenciais.',
+    connections: ['Voluntários', 'Empresas', 'Tutores'],
+    result: 'Mais apoio, visibilidade e novas chances para os animais.'
+  },
+  parceiros: {
+    index: '05 / 06',
+    icon: '◇',
+    label: 'Rede de parceiros',
+    title: 'Parcerias que ampliam possibilidades.',
+    text: 'Instituições, investidores e marcas fortalecem o ecossistema com conhecimento, estrutura e colaboração estratégica.',
+    connections: ['Negócios', 'Solidário', 'Inteligência'],
+    result: 'Mais capacidade de expansão e impacto em escala nacional.'
+  },
+  inteligencia: {
+    index: '06 / 06',
+    icon: '⌁',
+    label: 'Dados e tecnologia',
+    title: 'Informação que melhora cada conexão.',
+    text: 'Dados organizados apoiam decisões, otimizam rotas, revelam necessidades e tornam a experiência mais eficiente.',
+    connections: ['Todo o ecossistema', 'Jornadas', 'Resultados'],
+    result: 'Mais eficiência, personalização e evolução contínua.'
   }
 };
 
@@ -286,4 +345,63 @@ appPreview?.addEventListener('focusout', restartAppModeRotation);
 if (appModeTabs.length) {
   renderAppMode(currentAppMode);
   restartAppModeRotation();
+}
+
+function renderEcosystemNode(nodeKey, moveFocus = false) {
+  const content = ecosystemContent[nodeKey];
+  const connections = document.getElementById('ecosystemDetailConnections');
+
+  if (!content || !ecosystemDetail || !connections) {
+    return;
+  }
+
+  ecosystemDetail.classList.add('changing');
+
+  window.setTimeout(() => {
+    setText('ecosystemDetailIndex', content.index);
+    setText('ecosystemDetailIcon', content.icon);
+    setText('ecosystemDetailLabel', content.label);
+    setText('ecosystemDetailTitle', content.title);
+    setText('ecosystemDetailText', content.text);
+    setText('ecosystemDetailResult', content.result);
+
+    connections.replaceChildren(...content.connections.map((connection) => {
+      const item = document.createElement('span');
+      item.textContent = connection;
+      return item;
+    }));
+
+    ecosystemNodes.forEach((node) => {
+      const isActive = node.dataset.ecosystemNode === nodeKey;
+      node.classList.toggle('active', isActive);
+      node.setAttribute('aria-pressed', String(isActive));
+
+      if (isActive && moveFocus) {
+        node.focus();
+      }
+    });
+
+    ecosystemDetail.classList.remove('changing');
+  }, 160);
+}
+
+ecosystemNodes.forEach((node, index) => {
+  node.addEventListener('click', () => {
+    renderEcosystemNode(node.dataset.ecosystemNode);
+  });
+
+  node.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+      return;
+    }
+
+    event.preventDefault();
+    const direction = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1;
+    const nextIndex = (index + direction + ecosystemNodes.length) % ecosystemNodes.length;
+    renderEcosystemNode(ecosystemNodes[nextIndex].dataset.ecosystemNode, true);
+  });
+});
+
+if (ecosystemNodes.length) {
+  renderEcosystemNode('tutor');
 }

@@ -105,6 +105,11 @@
 
             </div>
 
+            <a class="ecosystem-map-link" href="#mapa-ecossistema">
+              Explorar o mapa completo
+              <span aria-hidden="true">→</span>
+            </a>
+
         </div>
 
         <div class="ecossistema-imagem reveal">
@@ -121,6 +126,112 @@
 
     </div>
 
+</section>
+<section class="section ecosystem-map-section" id="mapa-ecossistema">
+  <div class="container">
+    <div class="ecosystem-map-heading reveal">
+      <div>
+        <span class="eyebrow">Mapa do ecossistema</span>
+        <h2>Tudo se conecta para o cuidado acontecer.</h2>
+      </div>
+      <p>
+        Explore os núcleos do Connect Vet do Brasil e entenda como informação,
+        serviços, oportunidades e impacto social circulam pela plataforma.
+      </p>
+    </div>
+
+    <div class="ecosystem-map-shell reveal">
+      <div class="ecosystem-map" aria-label="Mapa interativo do ecossistema Connect Vet">
+        <svg class="ecosystem-connections" aria-hidden="true" viewBox="0 0 760 620">
+          <path d="M380 310 C300 250 250 160 150 112"/>
+          <path d="M380 310 C465 240 515 160 612 112"/>
+          <path d="M380 310 C290 330 190 340 100 310"/>
+          <path d="M380 310 C470 330 570 340 660 310"/>
+          <path d="M380 310 C300 390 245 465 150 510"/>
+          <path d="M380 310 C465 390 520 465 612 510"/>
+        </svg>
+
+        <button aria-pressed="true" class="ecosystem-node node-tutor active" data-ecosystem-node="tutor" style="--node-x: 14%; --node-y: 14%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">♥</span>
+          <strong>Tutores</strong>
+          <small>Cuidado simplificado</small>
+        </button>
+
+        <button aria-pressed="false" class="ecosystem-node node-professional" data-ecosystem-node="profissional" style="--node-x: 68%; --node-y: 14%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">+</span>
+          <strong>Profissionais</strong>
+          <small>Trabalho valorizado</small>
+        </button>
+
+        <button aria-pressed="false" class="ecosystem-node node-business" data-ecosystem-node="negocios" style="--node-x: 2%; --node-y: 43%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">▦</span>
+          <strong>Negócios</strong>
+          <small>Serviços e produtos</small>
+        </button>
+
+        <button aria-pressed="false" class="ecosystem-node node-social" data-ecosystem-node="solidario" style="--node-x: 77%; --node-y: 43%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">◎</span>
+          <strong>Solidário</strong>
+          <small>Impacto que conecta</small>
+        </button>
+
+        <button aria-pressed="false" class="ecosystem-node node-partners" data-ecosystem-node="parceiros" style="--node-x: 14%; --node-y: 73%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">◇</span>
+          <strong>Parceiros</strong>
+          <small>Rede estratégica</small>
+        </button>
+
+        <button aria-pressed="false" class="ecosystem-node node-data" data-ecosystem-node="inteligencia" style="--node-x: 68%; --node-y: 73%;" type="button">
+          <span class="ecosystem-node-icon" aria-hidden="true">⌁</span>
+          <strong>Inteligência</strong>
+          <small>Dados e eficiência</small>
+        </button>
+
+        <div class="ecosystem-core" aria-label="Connect Vet, núcleo central">
+          <span class="core-pulse" aria-hidden="true"></span>
+          <img alt="" src="assets/svg/P_B.svg">
+          <strong>Connect Vet</strong>
+          <small>Um ecossistema. Muitas conexões.</small>
+        </div>
+      </div>
+
+      <aside class="ecosystem-detail" aria-live="polite">
+        <span class="ecosystem-detail-index" id="ecosystemDetailIndex">01 / 06</span>
+        <div class="ecosystem-detail-icon" id="ecosystemDetailIcon" aria-hidden="true">♥</div>
+        <span class="ecosystem-detail-label" id="ecosystemDetailLabel">Connect Easy</span>
+        <h3 id="ecosystemDetailTitle">Tutores no centro do cuidado.</h3>
+        <p id="ecosystemDetailText">
+          Uma jornada simples para encontrar profissionais, organizar informações
+          e cuidar de animais de pequeno e grande porte.
+        </p>
+        <div class="ecosystem-detail-flow">
+          <strong>Conecta com</strong>
+          <div id="ecosystemDetailConnections">
+            <span>Profissionais</span>
+            <span>Clínicas</span>
+            <span>Serviços</span>
+          </div>
+        </div>
+        <div class="ecosystem-detail-result">
+          <span aria-hidden="true">↗</span>
+          <div>
+            <small>Valor gerado</small>
+            <strong id="ecosystemDetailResult">Mais acesso, confiança e continuidade no cuidado.</strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ecosystem-flow-strip reveal" aria-label="Fluxo de valor do ecossistema">
+      <div><span>01</span><strong>Encontre</strong><small>Pessoas e soluções certas</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>02</span><strong>Conecte</strong><small>Necessidades e oportunidades</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>03</span><strong>Acompanhe</strong><small>Jornadas e resultados</small></div>
+      <i aria-hidden="true">→</i>
+      <div><span>04</span><strong>Transforme</strong><small>Cuidado em impacto real</small></div>
+    </div>
+  </div>
 </section>
 <section class="section app-experience" id="experiencia-app">
   <div class="container app-experience-grid">
@@ -258,6 +369,12 @@
           <a href="#contatos" class="btn btn-primary">Quero participar</a>
           <a href="#desenvolvimento" class="btn btn-outline">Ver ferramentas</a>
         </div>
+
+        <div class="section-trust-pills" aria-label="Diferenciais do Connect Professional">
+          <span>Perfis verificados</span>
+          <span>Agenda inteligente</span>
+          <span>Presença profissional</span>
+        </div>
       </div>
 
       <div class="profissional-lateral direita reveal">
@@ -348,6 +465,12 @@
           <a href="#contatos" class="btn btn-primary">Quero conhecer</a>
           <a href="#ecossistema" class="btn btn-outline">Ver ecossistema</a>
         </div>
+
+        <div class="section-trust-pills light" aria-label="Diferenciais do Connect Easy">
+          <span>Busca rápida</span>
+          <span>Jornada simples</span>
+          <span>Cuidado contínuo</span>
+        </div>
       </div>
 
       <div class="connect-easy-lateral direita reveal">
@@ -430,6 +553,12 @@
         <div class="solidario-buttons">
           <a href="#contatos" class="btn btn-primary">Quero ajudar</a>
           <a href="#contatos" class="btn btn-outline">Cadastrar ONG</a>
+        </div>
+
+        <div class="section-trust-pills dark" aria-label="Diferenciais do Connect Vet Solidário">
+          <span>Campanhas verificadas</span>
+          <span>Adoção responsável</span>
+          <span>Impacto transparente</span>
         </div>
       </div>
 
@@ -704,6 +833,7 @@
       <a href="#connect-professional">Connect Professional</a>
       <a href="#connect-easy">Connect Easy</a>
       <a href="#solidario">Connect Vet Solidário</a>
+      <a href="#mapa-ecossistema">Mapa do ecossistema</a>
       <a href="#experiencia-app">Experimente o app</a>
     </div>
 
