@@ -1834,13 +1834,15 @@
   .profissional-modulo:last-child {
     border-bottom: none;
   }
+
+  
 }
 .profissional-logo {
     margin-bottom: 20px;
 }
 
 .profissional-logo img {
-    max-width: 180px;
+    width: min(500px, 100%);
     height: auto;
     display: block;
 }
