@@ -64,16 +64,9 @@
   box-shadow: 0 10px 35px rgba(0,0,0,0.25);
 }
 
-    /* .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-height);
-      z-index: 1000;
-      background: var(--verde-escuro);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-    } */
+.header.scrolled .nav {
+  height: 74px;
+}
 
     .nav {
       height: var(--header-height);
@@ -146,6 +139,15 @@
       background: var(--verde-principal);
       border-radius: 14px;
       cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--amarelo);
+      outline-offset: 4px;
     }
 
     .menu-toggle span {
@@ -909,6 +911,11 @@
     }
 
     @media (max-width: 1080px) {
+      .header.scrolled,
+      .header.scrolled .nav {
+        height: var(--header-height);
+      }
+
       .menu {
         position: fixed;
         top: var(--header-height);
@@ -1849,19 +1856,7 @@
 
 /* ===========================
    HALL DE ENTRADA
-   Primeira seção com logo centralizada
    =========================== */
-
-/* .hero.hall-entrada {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: var(--header-height);
-  padding-bottom: 40px;
-  background: #0B5F0B;
-  overflow: hidden;
-} */
 
 .hall-entrada {
   min-height: 100vh;
@@ -1870,16 +1865,12 @@
   align-items: center;
   background:
     linear-gradient(90deg, rgba(2, 28, 13, 0.96) 0%, rgba(2, 28, 13, 0.82) 42%, rgba(2, 28, 13, 0.25) 100%),
-    url("../assets/img/background-1.png") center/cover no-repeat;
+    url("../assets/img/background-1.webp") center/cover no-repeat;
 }
 
 .hero.hall-entrada::before {
   display: none;
 }
-
-/* .hero-container {
-  width: 100%;
-} */
 
 .hero-text {
   max-width: 620px;
@@ -1930,32 +1921,9 @@
   color: #06210f;
 }
 
-/* .hall-container {
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .hall-logo {
-    max-width: 650px;
-    width: 70%;
-    height: auto;
-} */
-
 @media (max-width: 760px) {
   .hero.hall-entrada {
     padding-bottom: 24px;
-  }
-
-  .hall-logo {
-    width: min(94vw, 680px);
-  }
-}
-
-@media (max-width: 480px) {
-  .hall-logo {
-    width: 96vw;
   }
 }
 /* ===========================
@@ -2427,9 +2395,15 @@
   margin-bottom: 6px;
 }
 
-.contato-info span {
+.contato-info span,
+.contato-info a {
   color: #4B5563;
   font-size: 17px;
+}
+
+.contato-info a:hover {
+  color: #0E5C0B;
+  text-decoration: underline;
 }
 
 .contato-imagem {
@@ -3212,10 +3186,6 @@ video {
     max-width: 190px;
   }
 
-  /* .hall-logo {
-    width: 95vw;
-  } */
-
   h2,
   .parcerias-texto h2,
   .profissional-centro h2,
@@ -3454,108 +3424,23 @@ video {
   .solidario-buttons .btn {
     width: 100%;
   }
-
-/* =========================== MUDANÇA DE LAYOUT ============================== */
-
-  box-sizing: border-box; }
-
-
-html {
-  scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  padding-top: 86px;
-}
-
-/* Cabeçalho fixo */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 86px;
-  z-index: 1000;
-  background: rgba(0, 35, 16, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Área de navegação */
-.header .nav {
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Marca e logotipo */
-.brand {
-  display: flex;
-  align-items: center;
-}
-
-.logo-header {
-  display: block;
-  width: 130px;
-  height: auto;
-}
-
-/* Menu */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 34px;
-
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  transition: color 0.25s ease;
-}
-
-.menu a:hover {
-  color: #7ed957;
-}
-
-/* Adaptação para celular */
-@media (max-width: 768px) {
-  .header {
-    height: 70px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  body {
-    padding-top: 70px;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 
-  .header .nav {
-    padding: 0 16px;
-  }
-
-  .logo-header {
-    width: 105px;
-  }
-
-  .menu {
-    gap: 14px;
-  }
-
-  .menu a {
-    font-size: 12px;
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

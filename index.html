@@ -27,7 +27,7 @@
 <li><a href="#contatos">Contatos</a></li>
 </ul>
 </nav>
-<button aria-label="Abrir menu" class="menu-toggle" id="menuToggle">
+<button aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" id="menuToggle" type="button">
 <span></span>
 <span></span>
 <span></span>
@@ -52,11 +52,6 @@
     </div>
   </div>
 </section>
-<!-- <section class="hero hall-entrada" id="home">
-<div class="container hall-container content-layer reveal">
-<img src="assets/img/logo_hall.png" alt="Connect Vet do Brasil" class="hall-logo"/>
-</div>
-</section> -->
 <section class="section ecossistema-premium" id="ecossistema">
 
     <div class="container ecossistema-grid">
@@ -65,10 +60,10 @@
 
             <span class="eyebrow">Ecossistema</span>
 
-            <h2>VOCÊ SABE OQUE É UM ECOSSISTEMA DIGITAL?</h2>
+            <h2>Você sabe o que é um ecossistema digital?</h2>
 
             <p>
-                Imagine um sistema que atende a todas as necessidades de um setor, conectando pessoas, empresas e serviços DO INICIO AO FIM.
+                Imagine um sistema que atende a todas as necessidades de um setor, conectando pessoas, empresas e serviços do início ao fim.
             </p>
 
             <div class="feature-list">
@@ -106,7 +101,11 @@
 
             <img
                 src="assets/icons/1.png"
-                alt="Ecossistema Connect Vet do Brasil">
+                alt="Ecossistema Connect Vet do Brasil"
+                decoding="async"
+                height="929"
+                loading="lazy"
+                width="1326">
         </div>
 
     </div>
@@ -117,14 +116,14 @@
 
     <div class="profissional-topo">
       <div class="profissional-lateral reveal">
-        <img class="profissional-personagem vet" src="assets/icons/10.png" alt="Profissional veterinário">
+        <img class="profissional-personagem vet" src="assets/icons/10.png" alt="Profissional veterinário" decoding="async" height="1024" loading="lazy" width="915">
       </div>
 
       <div class="profissional-centro reveal">
         <span class="eyebrow">Connect Professional</span>
         <h2>A conexão que impulsiona o <span>profissional animal.</span></h2>
         <p>
-          Um mundo cheio de oportunidades para você profissional crescer em sua carreira ou trabalhar com oque ama!
+          Um mundo cheio de oportunidades para você, profissional, crescer na carreira e trabalhar com o que ama.
         </p>
 
         <div class="profissional-buttons">
@@ -134,7 +133,7 @@
       </div>
 
       <div class="profissional-lateral direita reveal">
-        <img class="profissional-personagem pet" src="assets/icons/11.png" alt="Mascote profissional">
+        <img class="profissional-personagem pet" src="assets/icons/11.png" alt="Mascote profissional" decoding="async" height="1024" loading="lazy" width="609">
       </div>
     </div>
 
@@ -142,7 +141,7 @@
       <div class="profissional-card-texto">
 
     <div class="profissional-logo">
-        <img src="assets/svg/Mescla_bv.svg" alt="Connect Vet Professional">
+        <img src="assets/svg/Mescla_bv.svg" alt="Connect Vet Professional" decoding="async" loading="lazy">
     </div>
 
     <p class="profissional-subtitle">
@@ -205,7 +204,7 @@
 
     <div class="connect-easy-topo">
       <div class="connect-easy-lateral reveal">
-        <img class="connect-easy-personagem tutor" src="assets/icons/8.png" alt="Tutor usando o Connect Easy">
+        <img class="connect-easy-personagem tutor" src="assets/icons/8.png" alt="Tutor usando o Connect Easy" decoding="async" height="1024" loading="lazy" width="958">
       </div>
 
       <div class="connect-easy-centro reveal">
@@ -224,7 +223,7 @@
       </div>
 
       <div class="connect-easy-lateral direita reveal">
-        <img class="connect-easy-personagem familia" src="assets/icons/9.png" alt="Família Connect Easy">
+        <img class="connect-easy-personagem familia" src="assets/icons/9.png" alt="Família Connect Easy" decoding="async" height="1024" loading="lazy" width="757">
       </div>
     </div>
 
@@ -288,7 +287,7 @@
 
     <div class="solidario-topo">
       <div class="solidario-lateral reveal">
-        <img class="solidario-personagem menina" src="assets/img/5.png" alt="Voluntária com cachorro">
+        <img class="solidario-personagem menina" src="assets/img/5.webp" alt="Voluntária com cachorro" decoding="async" height="675" loading="lazy" width="1200">
       </div>
 
       <div class="solidario-centro reveal">
@@ -307,12 +306,12 @@
       </div>
 
       <div class="solidario-lateral direita reveal">
-        <img class="solidario-personagem gato" src="assets/img/6.png" alt="Mascote gato">
+        <img class="solidario-personagem gato" src="assets/img/6.webp" alt="Mascote gato" decoding="async" height="675" loading="lazy" width="1200">
       </div>
     </div>
 
     <div class="solidario-ong-card reveal">
-      <img src="assets/img/aatan-logo.png" alt="Logo AATAN">
+      <img src="assets/img/aatan-logo.png" alt="Logo AATAN" decoding="async" height="754" loading="lazy" width="755">
 
       <div class="solidario-ong-texto">
         <span>Parceiro oficial do projeto</span>
@@ -380,12 +379,39 @@
         </div>
 
         <div class="desenvolvimento-personagem reveal">
-            <img src="assets/img/2.png" alt="Desenvolvimento Connect Vet">
+            <img src="assets/img/2.webp" alt="Desenvolvimento Connect Vet" decoding="async" height="675" loading="lazy" width="1200">
         </div>
 
     </div>
 
-    <!-- ROADMAP AQUI -->
+    <div class="roadmap reveal" aria-label="Etapas de desenvolvimento">
+      <article class="roadmap-item">
+        <div class="roadmap-dot" aria-hidden="true">01</div>
+        <div class="roadmap-card">
+          <small>Estruturação</small>
+          <h3>Base do ecossistema</h3>
+          <p>Validação das jornadas, formação da rede de parceiros e preparação da infraestrutura digital.</p>
+        </div>
+      </article>
+
+      <article class="roadmap-item">
+        <div class="roadmap-dot" aria-hidden="true">02</div>
+        <div class="roadmap-card">
+          <small>Lançamento</small>
+          <h3>Connect Professional e Connect Easy</h3>
+          <p>Entrada dos primeiros profissionais e tutores, com busca, perfis, contatos e organização de atendimentos.</p>
+        </div>
+      </article>
+
+      <article class="roadmap-item">
+        <div class="roadmap-dot" aria-hidden="true">03</div>
+        <div class="roadmap-card">
+          <small>Expansão</small>
+          <h3>Rede nacional e impacto social</h3>
+          <p>Ampliação de serviços, parcerias e iniciativas do Connect Vet Solidário em novas regiões do Brasil.</p>
+        </div>
+      </article>
+    </div>
 
 </div>
 
@@ -408,7 +434,7 @@
 
     <div class="parceiro-destaque reveal">
       <div class="parceiro-logo-box">
-        <img src="assets/img/aatan-logo.png" alt="Logo AATAN">
+        <img src="assets/img/aatan-logo.png" alt="Logo AATAN" decoding="async" height="754" loading="lazy" width="755">
       </div>
 
       <div class="parceiro-conteudo">
@@ -458,22 +484,22 @@
       <div class="contato-info">
         <div>
           <strong>E-mail</strong>
-          <span>contato@connectvetdobrasil.com.br</span>
+          <a href="mailto:contato@connectvetdobrasil.com.br">contato@connectvetdobrasil.com.br</a>
         </div>
 
         <div>
           <strong>WhatsApp</strong>
-          <span>Atendimento comercial e parcerias</span>
+          <a href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">Atendimento comercial e parcerias</a>
         </div>
       </div>
     </div>
 
     <div class="contato-imagem reveal">
       <div class="contato-glow"></div>
-      <img src="assets/img/3.png" alt="Contato Connect Vet do Brasil">
+      <img src="assets/img/3.webp" alt="Contato Connect Vet do Brasil" decoding="async" height="675" loading="lazy" width="1200">
     </div>
 
-    <form class="contact-form contato-form-premium reveal" onsubmit="handleForm(event)">
+    <form class="contact-form contato-form-premium reveal" id="contactForm">
       <div class="form-row">
         <div>
           <label for="name">Nome</label>
