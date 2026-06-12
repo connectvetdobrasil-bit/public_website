@@ -4,7 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Connect Vet: do Brasil</title>
+<meta content="Connect Vet do Brasil: um ecossistema digital que conecta tutores, profissionais, empresas e iniciativas sociais para transformar o cuidado animal." name="description"/>
+<meta content="#063a1d" name="theme-color"/>
+<title>Connect Vet do Brasil | O futuro do cuidado animal</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500;600;700&amp;family=Antonio:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -48,7 +50,16 @@
         a jornada do cuidado animal.
       </p>
 
-      <a href="#ecossistema" class="hero-btn">Conheça o projeto</a>
+      <div class="hero-actions">
+        <a href="#experiencia-app" class="hero-btn">Experimentar o app</a>
+        <a href="#ecossistema" class="hero-link">Conheça o ecossistema <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="hero-proof" aria-label="Destaques do ecossistema">
+        <div><strong>3</strong><span>frentes conectadas</span></div>
+        <div><strong>1</strong><span>jornada integrada</span></div>
+        <div><strong>Brasil</strong><span>visão nacional</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -110,6 +121,123 @@
 
     </div>
 
+</section>
+<section class="section app-experience" id="experiencia-app">
+  <div class="container app-experience-grid">
+    <div class="app-experience-copy reveal">
+      <span class="eyebrow">Experimente o futuro</span>
+      <h2>Um gostinho do app antes mesmo do lançamento.</h2>
+      <p>
+        Explore algumas jornadas planejadas para o Connect Vet. Alterne entre os perfis
+        e veja como tutores, profissionais e iniciativas sociais poderão se conectar.
+      </p>
+
+      <div class="app-mode-tabs" aria-label="Escolha uma experiência" role="tablist">
+        <button aria-controls="app-preview" aria-selected="true" class="app-mode-tab active" data-app-mode="tutor" id="tab-tutor" role="tab" type="button">
+          <span class="mode-icon" aria-hidden="true">♥</span>
+          Tutor
+        </button>
+        <button aria-controls="app-preview" aria-selected="false" class="app-mode-tab" data-app-mode="profissional" id="tab-profissional" role="tab" type="button">
+          <span class="mode-icon" aria-hidden="true">+</span>
+          Profissional
+        </button>
+        <button aria-controls="app-preview" aria-selected="false" class="app-mode-tab" data-app-mode="solidario" id="tab-solidario" role="tab" type="button">
+          <span class="mode-icon" aria-hidden="true">◎</span>
+          Solidário
+        </button>
+      </div>
+
+      <div class="app-mode-description" aria-live="polite">
+        <span id="appModeLabel">Connect Easy</span>
+        <h3 id="appModeTitle">Cuidado completo na palma da mão.</h3>
+        <p id="appModeText">Encontre profissionais próximos, acompanhe seus animais e organize os próximos cuidados.</p>
+      </div>
+
+      <div class="experience-highlights" id="appModeHighlights">
+        <span>Busca por proximidade</span>
+        <span>Carteira do animal</span>
+        <span>Agenda de cuidados</span>
+      </div>
+    </div>
+
+    <div class="app-preview-stage reveal" id="app-preview" role="tabpanel" aria-labelledby="tab-tutor">
+      <div class="app-orbit orbit-one" aria-hidden="true"></div>
+      <div class="app-orbit orbit-two" aria-hidden="true"></div>
+
+      <div class="app-phone">
+        <div class="app-phone-frame">
+          <div class="app-phone-speaker" aria-hidden="true"></div>
+          <div class="app-screen">
+            <div class="app-status">
+              <span>9:41</span>
+              <span aria-hidden="true">● ◔ ▰</span>
+            </div>
+
+            <div class="app-screen-header">
+              <div>
+                <small id="appGreeting">Olá, Marcia!</small>
+                <strong id="appHeadline">Como podemos cuidar hoje?</strong>
+              </div>
+              <div class="app-avatar" id="appAvatar" aria-hidden="true">M</div>
+            </div>
+
+            <div class="app-search">
+              <span aria-hidden="true">⌕</span>
+              <span id="appSearchText">Buscar veterinários e serviços</span>
+            </div>
+
+            <div class="app-quick-grid" id="appQuickGrid">
+              <button type="button"><span>✚</span>Veterinário</button>
+              <button type="button"><span>⌖</span>Próximos</button>
+              <button type="button"><span>▣</span>Agenda</button>
+              <button type="button"><span>♡</span>Cuidados</button>
+            </div>
+
+            <div class="app-screen-section">
+              <div class="app-section-heading">
+                <strong id="appCardHeading">Profissionais perto de você</strong>
+                <span>Ver todos</span>
+              </div>
+
+              <div class="app-result-card">
+                <div class="app-result-avatar" id="appResultAvatar">CV</div>
+                <div>
+                  <strong id="appResultTitle">Clínica Vet Center</strong>
+                  <span id="appResultMeta">1,2 km • Aberto agora</span>
+                  <small id="appResultBadge">★ 4,9 atendimento</small>
+                </div>
+                <button aria-label="Abrir resultado" type="button">›</button>
+              </div>
+            </div>
+
+            <div class="app-alert-card" id="appAlertCard">
+              <span class="app-alert-icon" aria-hidden="true">♡</span>
+              <div>
+                <strong id="appAlertTitle">Próximo cuidado</strong>
+                <small id="appAlertText">Vacina da Mel em 4 dias</small>
+              </div>
+            </div>
+
+            <div class="app-bottom-nav" aria-hidden="true">
+              <span class="active">⌂<small>Início</small></span>
+              <span>⌕<small>Buscar</small></span>
+              <span>♡<small>Pets</small></span>
+              <span>○<small>Perfil</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-floating-note note-top">
+        <span aria-hidden="true">✓</span>
+        <div><strong>Perfil verificado</strong><small>Mais confiança na escolha</small></div>
+      </div>
+      <div class="app-floating-note note-bottom">
+        <span aria-hidden="true">⚡</span>
+        <div><strong>Conexão rápida</strong><small>Da busca ao atendimento</small></div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="section profissional-section" id="connect-professional">
   <div class="container profissional-area">
@@ -545,10 +673,63 @@
 </section>
 </main>
 <footer class="footer">
-<div class="container">
-<p><strong>Connect Vet do Brasil</strong> © 2026. Plataforma em desenvolvimento.</p>
-</div>
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a aria-label="Voltar ao início" class="footer-logo" href="#home">
+        <img alt="Connect Vet do Brasil" src="assets/svg/P_B.svg">
+      </a>
+      <p>Conectando cuidado, profissionais, inovação e impacto social em um único ecossistema.</p>
+      <div class="footer-socials" aria-label="Redes sociais">
+        <a aria-label="Instagram do Connect Vet" href="https://www.instagram.com/connectvetdobrasil/" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <span>Instagram</span>
+        </a>
+        <a aria-label="TikTok do Connect Vet" href="https://www.tiktok.com/@connectvetdobrasil" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 4v10.2a4.6 4.6 0 1 1-3.4-4.45"/><path d="M14 4c.7 2.4 2.25 3.85 5 4"/></svg>
+          <span>TikTok</span>
+        </a>
+        <a aria-label="WhatsApp do Connect Vet" href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8.5c.5 2 2 3.5 4 4l1.2-1.1c.3-.2.6-.2.9 0l1.4.7"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a aria-label="Facebook do Connect Vet" href="https://www.facebook.com/connectvetdobrasil" rel="noopener noreferrer" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-3H14V8.2c0-.9.3-1.7 1.8-1.7H18V3.8c-.4-.1-1.5-.2-2.7-.2-2.7 0-4.3 1.6-4.3 4.5V10H8v3h3v8"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <strong>Ecossistema</strong>
+      <a href="#connect-professional">Connect Professional</a>
+      <a href="#connect-easy">Connect Easy</a>
+      <a href="#solidario">Connect Vet Solidário</a>
+      <a href="#experiencia-app">Experimente o app</a>
+    </div>
+
+    <div class="footer-column">
+      <strong>Conecte-se</strong>
+      <a href="#parcerias">Parcerias</a>
+      <a href="#desenvolvimento">Desenvolvimento</a>
+      <a href="#contatos">Fale com a equipe</a>
+      <a href="mailto:contato@connectvetdobrasil.com.br">E-mail</a>
+    </div>
+
+    <div class="footer-cta">
+      <span>Faça parte dessa transformação</span>
+      <strong>O cuidado animal começa com uma boa conexão.</strong>
+      <a class="btn btn-primary" href="#contatos">Quero participar</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p><strong>Connect Vet do Brasil</strong> © 2026. Todos os direitos reservados.</p>
+    <p>Plataforma em desenvolvimento.</p>
+  </div>
 </footer>
+<a aria-label="Conversar pelo WhatsApp" class="whatsapp-float" href="https://wa.me/5515996451575" rel="noopener noreferrer" target="_blank">
+  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8.5c.5 2 2 3.5 4 4l1.2-1.1c.3-.2.6-.2.9 0l1.4.7"/></svg>
+</a>
 <script src="js/script.js"></script>
 </body>
 </html>
